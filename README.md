@@ -13,8 +13,8 @@ description: Create AWS Application Load Balancer Custom HTTP Header, 302 Redire
 - Rule-3 and Rule-4 will outline the HTTP Redirect using Query String and Host Header based rules
 - **Rule-1:** custom-header=my-app-1 should go to App1 EC2 Instances
 - **Rule-2:** custom-header=my-app-2 should go to App2 EC2 Instances   
-- **Rule-3:** When Query-String, website=aws-eks redirect to https://stacksimplify.com/aws-eks/ 
-- **Rule-4:** When Host Header = azure-aks.devopsincloud.com, redirect to https://stacksimplify.
+- **Rule-3:** When Query-String, website=aws-eks redirect to https://www.linkedin.com/in/gdlopezcastillo/
+- **Rule-4:** When Host Header = azure-aks.devopsincloud.com, redirect to https://linktr.ee/gdlopezcastillo.
 
 - Understand about Priority feature for Rules `priority = 2`
 
@@ -80,9 +80,9 @@ description: Create AWS Application Load Balancer Custom HTTP Header, 302 Redire
   
 ```
 ### Step-02-03: Rule-3: Query String Redirect
-- Rule-3: When Query-String, website=aws-eks redirect to https://stacksimplify.com/aws-eks/
+- Rule-3: When Query-String, website=aws-eks redirect to https://www.linkedin.com/in/gdlopezcastillo/
 ```t
-  # Rule-3: When Query-String, website=aws-eks redirect to https://stacksimplify.com/aws-eks/
+  # Rule-3: When Query-String, website=aws-eks redirect to https://www.linkedin.com/in/gdlopezcastillo/
         # Rule-3: Query String Redirect Redirect Rule
         my-redirect-query = {
           priority = 3
@@ -104,9 +104,9 @@ description: Create AWS Application Load Balancer Custom HTTP Header, 302 Redire
         }# End of Rule-3 Query String Redirect Redirect Rule
 ```
 ### Step-02-04: Rule-4: Host Header Redirect
-- Rule-4: When Host Header = azure-aks.devopsincloud.com, redirect to https://stacksimplify.com/azure-aks/azure-kubernetes-service-introduction/
+- Rule-4: When Host Header = azure-aks.devopsincloud.com, redirect to https://linktr.ee/gdlopezcastillo
 ```t
-  # Rule-4: When Host Header = azure-aks.devopsincloud.com, redirect to https://stacksimplify.com/azure-aks/azure-kubernetes-service-introduction/
+  # Rule-4: When Host Header = azure-aks.devopsincloud.com, redirect to https://linktr.ee/gdlopezcastillo
         # Rule-4: Host Header Redirect
         my-redirect-hh = {
           priority = 4
@@ -182,21 +182,21 @@ custom-header = my-app-2  - Should get the page from App2
 ```
 
 ## Step-07: Verify Rule-3 
-- When Query-String, website=aws-eks redirect to https://stacksimplify.com/aws-eks/
+- When Query-String, website=aws-eks redirect to https://www.linkedin.com/in/gdlopezcastillo/
 ```t
 # Verify Rule-3
 https://myapps.devopsincloud.com/?website=aws-eks 
 Observation: 
-1. Should Redirect to https://stacksimplify.com/aws-eks/
+1. Should Redirect to https://www.linkedin.com/in/gdlopezcastillo/
 ```
 
 ## Step-08: Verify Rule-4
--  When Host Header = azure-aks.devopsincloud.com, redirect to https://stacksimplify.com/azure-aks/azure-kubernetes-service-introduction/
+-  When Host Header = azure-aks.devopsincloud.com, redirect to https://linktr.ee/gdlopezcastillo
 ```t
 # Verify Rule-4
 http://azure-aks.devopsincloud.com
 Observation: 
-1. Should redirect to https://stacksimplify.com/azure-aks/azure-kubernetes-service-introduction/
+1. Should redirect to https://linktr.ee/gdlopezcastillo
 ```
 
 ## Step-09: Clean-Up
