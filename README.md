@@ -1,5 +1,4 @@
 ---
-title: AWS ALB Different Listener Rules for Routing
 description: Create AWS Application Load Balancer Custom HTTP Header, 302 Redirects with Query String and Host Headers
 ---
 # AWS ALB Query String, Host Header Redirects and Custom Header Routing
